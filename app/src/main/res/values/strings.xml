@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Erva</string>
+    <string name="logo_description">Erva logo</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="welcome_message">Welcome to Erva! Your go-to app for predicting and managing plant diseases. Please choose an option to get started.</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="email_hint">hello@reallygreatsite.com</string>
+    <string name="password_hint">***************</string>
+    <string name="confirm_password_hint">***************</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="privacy_policy">I agree to the Privacy Policy</string>
+    <string name="logo_desc">App logo</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="description_title">How It Works</string>
+    <string name="description_text">Erva helps you predict plant diseases and take necessary actions.</string>
+    <string name="how_it_works">How It Works</string>
+    <string name="upload_photo">Upload a Photo</string>
+    <string name="get_answers">Get Answers</string>
+    <string name="take_action">Take Action</string>
+    <string name="profile_desc">Profile Image</string>
+    <string name="camera_desc">Camera Icon</string>
+    <string name="lightbulb_desc">Lightbulb Icon</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_chat">Chat</string>
+
+</resources>
