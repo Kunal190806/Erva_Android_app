@@ -15,9 +15,11 @@ class CameraFragment : Fragment() {
 
     private var _binding: FragmentCameraBinding? = null
     private val binding get() = _binding!!
+    private var imageUri: Uri? = null
 
     private val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         uri?.let {
+            imageUri = it
             binding.previewImageView.setImageURI(it)
         }
     }
@@ -25,7 +27,8 @@ class CameraFragment : Fragment() {
     private val cameraLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
             result.data?.getStringExtra("imageUri")?.let {
-                binding.previewImageView.setImageURI(Uri.parse(it))
+                imageUri = Uri.parse(it)
+                binding.previewImageView.setImageURI(imageUri)
             }
         }
     }
@@ -51,8 +54,13 @@ class CameraFragment : Fragment() {
         }
 
         binding.analyzeButton.setOnClickListener {
-            val intent = Intent(requireActivity(), AnalysisResultActivity::class.java)
-            startActivity(intent)
+            imageUri?.let {
+                val intent = Intent(requireActivity(), AnalysisResultActivity::class.java).apply {
+                    putExtra("imageUri", it.toString())
+                    putExtra("model", "model_color.tflite")
+                }
+                startActivity(intent)
+            }
         }
     }
 

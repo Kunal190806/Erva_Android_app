@@ -13,14 +13,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Erva"
+        android:theme="@style/Theme.Erva.AppCompat"
         tools:targetApi="31">
 
         <!-- Main Activity (Launcher) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Erva">
+            android:theme="@style/Theme.Erva.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -61,7 +61,7 @@
             android:exported="false"
             android:label="Chatbot"
             android:theme="@style/Theme.Erva.AppCompat" />
-        
+
         <!-- Camera Activity -->
         <activity
             android:name=".CameraActivity"

@@ -1,10 +1,10 @@
 package com.example.erva
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.erva.databinding.ActivityHomeBinding
+import com.google.android.material.navigation.NavigationBarView
 
 class HomeActivity : AppCompatActivity() {
 
@@ -12,43 +12,43 @@ class HomeActivity : AppCompatActivity() {
 
     private val homeFragment = HomeFragment()
     private val cameraFragment = CameraFragment()
-    private var activeFragment: Fragment = homeFragment
+    private val chatFragment = ChatFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Setup fragments
-        supportFragmentManager.beginTransaction().apply {
-            add(R.id.fragment_container, cameraFragment, "2").hide(cameraFragment)
-            add(R.id.fragment_container, homeFragment, "1")
-        }.commit()
+        // Set the listener for the bottom navigation view
+        binding.bottomNavigation.setOnItemSelectedListener(onNavigationItemSelected)
 
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.navigation_home -> {
-                    supportFragmentManager.beginTransaction().hide(activeFragment).show(homeFragment).commit()
-                    activeFragment = homeFragment
-                    true
-                }
-                R.id.navigation_camera -> {
-                    supportFragmentManager.beginTransaction().hide(activeFragment).show(cameraFragment).commit()
-                    activeFragment = cameraFragment
-                    true
-                }
-                R.id.navigation_chat -> {
-                    startActivity(Intent(this, ChatbotActivity::class.java))
-                    // Do not mark as true, so the tab doesn't get selected
-                    false
-                }
-                else -> false
-            }
-        }
-
-        // Set the default fragment
+        // Load the default fragment
         if (savedInstanceState == null) {
             binding.bottomNavigation.selectedItemId = R.id.navigation_home
         }
+    }
+
+    private val onNavigationItemSelected = NavigationBarView.OnItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.navigation_home -> {
+                loadFragment(homeFragment)
+                return@OnItemSelectedListener true
+            }
+            R.id.navigation_camera -> {
+                loadFragment(cameraFragment)
+                return@OnItemSelectedListener true
+            }
+            R.id.navigation_chat -> {
+                loadFragment(chatFragment)
+                return@OnItemSelectedListener true
+            }
+        }
+        false
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
     }
 }

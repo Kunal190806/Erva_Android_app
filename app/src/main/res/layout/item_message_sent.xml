@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_edittext_register"
         android:padding="12dp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/text_color"
         android:text="Sample message sent" />
 
 </LinearLayout>

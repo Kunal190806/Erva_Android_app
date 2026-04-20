@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBF9F7"
+    android:background="@color/background_color"
     tools:context=".CameraFragment">
 
     <ImageView
@@ -34,33 +34,34 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#A8B999"
+        android:backgroundTint="@color/primary_color"
         android:drawableEnd="@drawable/ic_gallery"
         android:text="UPLOAD PHOTO FROM GALLERY"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
+        app:layout_constraintTop_toBottomOf="@id/logoImageView" />
 
     <Button
         android:id="@+id/previewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#A8B999"
+        android:backgroundTint="@color/primary_color"
         android:drawableEnd="@drawable/ic_preview"
         android:text="PREVIEW"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uploadButton" />
+        app:layout_constraintTop_toBottomOf="@id/uploadButton" />
 
     <ImageView
         android:id="@+id/previewImageView"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_margin="16dp"
-        android:background="#E0E0E0"
+        android:background="@color/surface_color"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewButton" />
@@ -72,12 +73,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#A8B999"
+        android:backgroundTint="@color/primary_color"
         android:drawableEnd="@drawable/ic_analyze"
         android:text="ANALYZE CROP"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/previewImageView" />
+        app:layout_constraintTop_toBottomOf="@id/previewImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

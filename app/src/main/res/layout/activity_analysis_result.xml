@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBF9F7"
+    android:background="@color/background_color"
     tools:context=".AnalysisResultActivity">
 
     <ImageView
@@ -32,10 +32,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#A8B999"
+        android:backgroundTint="@color/primary_color"
         android:drawableEnd="@drawable/ic_preview"
         android:text="PREVIEW"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
@@ -45,7 +45,8 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_margin="16dp"
-        android:background="#E0E0E0"
+        android:background="@color/surface_color"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewButton" />
@@ -55,7 +56,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardBackgroundColor="#DCE4D8"
+        app:cardBackgroundColor="@color/surface_color"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,16 +69,19 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/problemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PROBLEM"
-                android:textColor="#333333"
+                android:textColor="@color/text_color"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/problemDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:textColor="@color/text_color"
                 android:text="(Problem description)\n....................\n...................." />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -87,7 +91,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardBackgroundColor="#DCE4D8"
+        app:cardBackgroundColor="@color/surface_color"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,16 +104,19 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/solutionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SOLUTION"
-                android:textColor="#333333"
+                android:textColor="@color/text_color"
                 android:textStyle="bold" />
 
             <TextView
-                android.layout_width="wrap_content"
+                android:id="@+id/solutionDescription"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:textColor="@color/text_color"
                 android:text="(Solution description)\n....................\n...................." />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -121,10 +128,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#A8B999"
+        android:backgroundTint="@color/primary_color"
         android:drawableEnd="@drawable/ic_generate_report"
         android:text="GENERATE REPORT"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/solutionCard" />

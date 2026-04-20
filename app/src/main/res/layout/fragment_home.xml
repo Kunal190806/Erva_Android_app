@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="@color/background_color"
     tools:context=".HomeFragment">
 
     <ImageView
@@ -32,7 +32,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardBackgroundColor="#A8B999"
+        app:cardBackgroundColor="@color/primary_color"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="DESCRIPTION"
-                android:textColor="@android:color/white"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
                 android:layout_marginTop="8dp"
                 android:text="At ERVA, we\'re on a mission to help farmers, gardeners, and plant enthusiasts protect their crops and gardens with cutting-edge technology. Our app uses artificial intelligence to quickly and accurately detect plant diseases, ensuring your plants stay healthy and thriving."
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/white" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -68,9 +68,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#A8B999"
+        android:backgroundTint="@color/primary_color"
         android:text="HOW IT WORKS"
-        android:textColor="@android:color/white"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/descriptionCard" />
@@ -102,6 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UPLOAD\nA PHOTO"
+                android:textColor="@color/text_color"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -121,6 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="GET\nANSWERS"
+                android:textColor="@color/text_color"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -140,6 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TAKE\nACTION"
+                android:textColor="@color/text_color"
                 android:textAlignment="center" />
         </LinearLayout>
 
