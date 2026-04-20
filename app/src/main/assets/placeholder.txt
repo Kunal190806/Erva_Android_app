@@ -1,0 +1,1 @@
+Please add your model.tflite and labels.txt files to this assets folder.
